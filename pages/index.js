@@ -17,11 +17,7 @@ export default function Home() {
       {!movies && <h4>Loading...</h4>}
       {movies?.map((movie) => (
         <Link
-          href={{
-            pathname: `/movies/${movie.id}`,
-            query: { title: movie.original_title },
-          }}
-          as={`/movies/${movie.id}`}
+          href={`/movies/${movie.original_title}/${movie.id}`}
           key={movie.id}
         >
           <div className="movie" key={movie.id}>
