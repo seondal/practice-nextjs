@@ -1,16 +1,12 @@
 import "../styles/globals.css";
-import NavBar from "../components/NavBar";
+import Layout from "../components/Layout";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div>
-      <NavBar />
-      <Component {...pageProps} />
-      <style jsx global>{`
-        span {
-          color: white;
-        }
-      `}</style>
-    </div>
+    <>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
